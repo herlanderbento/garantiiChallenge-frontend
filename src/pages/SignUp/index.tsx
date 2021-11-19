@@ -1,11 +1,35 @@
 import { Container, Row, Col } from "reactstrap";
-import { Background, CardItem, Input, Label, Text } from "./styles";
-import { Button } from "../../components/Button";
+import { Background, CardItem, Input, Label, Text, Button } from "./styles";
 import { FaArrowLeft } from "react-icons/fa";
-
 import logo from "../../assets/book annotation.svg";
+import { ChangeEvent, useState } from "react";
+import { api } from "../../services/api";
 
 export function SignUp() {
+  const [data, setData] = useState({
+    username: "",
+    email: "",
+    password: "",
+  });
+
+  function handleInputChange(event: ChangeEvent<HTMLInputElement>) {
+    setData({
+      ...data,
+      [event.target.name]: event.target.value,
+    });
+  }
+
+  async function handleSubmit(event: ChangeEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    console.log(data);
+    // try {
+    //   await api.post("/", data);
+    // } catch (err) {
+    //   console.error(err);
+    // }
+  }
+
   return (
     <Background>
       <Container>
@@ -15,13 +39,16 @@ export function SignUp() {
               <div className="title">
                 <img src={logo} className="logo" alt="logo" />
               </div>
-              <form className="form">
+              <form className="form" onSubmit={handleSubmit}>
                 <div className="form-group">
                   <Label htmlFor="name">Nome completo</Label>
                   <Input
                     id="name"
+                    name="username"
+                    value={data.username}
+                    onChange={handleInputChange}
                     type="text"
-                    placeholder="exemple@gmail.com"
+                    placeholder="name"
                     className="form-control"
                   />
                 </div>
@@ -29,6 +56,9 @@ export function SignUp() {
                   <Label htmlFor="email">Seu Email</Label>
                   <Input
                     id="email"
+                    name="email"
+                    value={data.email}
+                    onChange={handleInputChange}
                     type="email"
                     placeholder="exemple@gmail.com"
                     className="form-control"
@@ -38,22 +68,14 @@ export function SignUp() {
                   <Label htmlFor="password">Sua palavra passe</Label>
                   <Input
                     id="password"
+                    name="password"
+                    value={data.password}
+                    onChange={handleInputChange}
                     type="password"
-                    placeholder="............."
+                    placeholder="password"
                     className="form-control"
                   />
                 </div>
-
-                {/* <div className="form-group">
-                  <Label htmlFor="password">Confirma palavra passe</Label>
-                  <Input
-                    id="password"
-                    type="password"
-                    placeholder="............."
-                    className="form-control"
-                  />
-                </div> */}
-
                 <Button className="mt-2">Criar conta</Button>
               </form>
             </CardItem>

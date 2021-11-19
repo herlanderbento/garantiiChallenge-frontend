@@ -1,7 +1,7 @@
 import { FaPen, FaSearch } from "react-icons/fa";
 import { PostContainer, Btn } from "./styles";
 
-import postOne from '../../assets/post-01.jpg'
+import postOne from "../../assets/post-01.jpg";
 
 export function Post() {
   return (
@@ -32,7 +32,9 @@ export function Post() {
               <FaPen />
             </div>
             <div className="title">
-              <h2>Funcionamento da engenharia de <br/> software!</h2>
+              <h2>
+                Funcionamento da engenharia de <br /> software!
+              </h2>
             </div>
           </figcaption>
         </figure>
@@ -64,7 +66,9 @@ export function Post() {
               <FaPen />
             </div>
             <div className="title">
-              <h2>Funcionamento da engenharia de <br/> software!</h2>
+              <h2>
+                Funcionamento da engenharia de <br /> software!
+              </h2>
             </div>
           </figcaption>
         </figure>

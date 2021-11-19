@@ -35,6 +35,18 @@ export const CardItem = styled(Card)`
     }
   }
 
+  .body{
+    margin: 10px;
+    h1{
+      font-size: 20px;
+      padding: 10px 0;
+    }
+    a{
+      text-decoration: none;
+      color: #121212;
+      
+    }
+  }
   .form {
     display: flex;
     flex-direction: column;
@@ -96,7 +108,6 @@ export const Label = styled(Labels)`
 `;
 
 export const Text = styled.div`
-  
   h1 {
     font-family: "Fredoka One", sans-serif;
     color: #ffffff;
@@ -108,6 +119,11 @@ export const Text = styled.div`
     opacity: 0.6;
   }
 
+  .cta{
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
   .primary{
     background: #ffffff !important;
     padding: 14px 30px;

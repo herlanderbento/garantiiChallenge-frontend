@@ -1,16 +1,15 @@
 import { Switch, Route } from "react-router-dom";
 
-import { SignIn } from "../pages/SignIn";
 import { SignUp } from "../pages/SignUp";
-import { Dashboard } from "../pages/Dashboard";
-
+import { Posts } from "../pages/Posts";
+import { ShowPosts } from "../pages/ShowPosts";
 
 export default function index() {
   return (
     <Switch>
-      <Route path="/" exact component={SignIn} />
-      <Route path="/sign-up" exact component={SignUp} />
-      <Route path="/dashboard" exact component={Dashboard} />
+      <Route path="/" exact component={SignUp} />
+      <Route path="/home" exact component={Posts} />
+      <Route path="/posts/:id" exact component={ShowPosts}/>
     </Switch>
   );
 }

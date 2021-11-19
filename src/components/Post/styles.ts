@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { shade } from 'polished'
 import { Button } from "../Button";
 
 export const PostContainer = styled.div`
@@ -99,9 +98,9 @@ export const PostContainer = styled.div`
           display: flex;
           gap: 10px;
 
-          .primary{
+          .primary {
             padding: 8px 12px !important;
-            &:last-child{
+            &:last-child {
               background: #850089;
             }
           }
@@ -109,38 +108,37 @@ export const PostContainer = styled.div`
       }
     }
 
-    .content{
-      padding: 10px  15px;
+    .content {
+      padding: 10px 15px;
       display: flex;
       justify-content: space-between;
       align-self: center;
       gap: 2px;
 
-      .date{
+      .date {
         flex: 1;
         text-align: center;
         //-right: 1px solid #b0b0b0;
         opacity: 0.6;
-        
-        h5{
+
+        h5 {
           font-family: "Fredoka One", sans-serif;
           font-size: 36px;
           margin: 0;
           color: #b0b0b0;
-         
         }
 
-        span{
+        span {
           font-weight: 600;
         }
       }
 
-      .desc{
+      .desc {
         flex: 6;
         padding: 0 15px;
         opacity: 0.6;
 
-        a{
+        a {
           color: #850089;
           opacity: 1 !important;
           margin-left: 15px;
@@ -154,7 +152,7 @@ export const Btn = styled(Button)`
   padding: 10px 25px;
   border-radius: 8px;
   border: 0;
-  background: #63409c ;
+  background: #63409c;
 
   &:focus {
     box-shadow: none;

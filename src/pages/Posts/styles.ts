@@ -1,10 +1,9 @@
 import styled from "styled-components";
-import { Card, Input as Inputs, Label as Labels } from "reactstrap";
-import { Button as Btn  } from "../../components/Button";
+import { Card, Input as Inputs, Label as Labels, Table as Tables } from "reactstrap";
 
 export const Background = styled.div`
   width: 100%;
-  height: 100vh;
+  height: auto;
   background: rgb(49, 0, 125);
   background: linear-gradient(
     90deg,
@@ -23,13 +22,17 @@ export const Background = styled.div`
   }
 `;
 
-export const Button = styled(Btn)`
-  width: 100%;
+export const Table = styled(Tables)`
+  border-color: none !important;
+  tr, th, tbody{
+    border: 0 !important;
+  }
 `
 
 export const CardItem = styled(Card)`
   background: #ffffff;
   color: #121212;
+  margin: 40px 0;
   padding: 40px;
 
   .title {
@@ -40,6 +43,18 @@ export const CardItem = styled(Card)`
     }
   }
 
+  .body{
+    margin: 10px;
+    h1{
+      font-size: 20px;
+      padding: 10px 0;
+    }
+    a{
+      text-decoration: none;
+      color: #121212;
+      
+    }
+  }
   .form {
     display: flex;
     flex-direction: column;
